@@ -3,17 +3,23 @@ package academy;
 public class Main {
 	public static void main(String[] args) {
 
+        Furniture furniture=new Furniture("Ikea",4,"Black",25000);
+        Measurements measurements=new Measurements(45,25,120);
+        Tv tv=new Tv("Bravia",52000,measurements);
+        Bed bed=new Bed("double cat",4,25,5,4);
+        Lamp lamp=new Lamp("glowing single",true,5);
+        Wall wall=new Wall("south");
+        Bedroom bedroom=new Bedroom(furniture,tv,lamp,bed,wall);
 
-		Motherboard motherboard = new Motherboard("G25", "Intel", 5, 5, "MICROSOFT WINDOWS");
-		Dimensions dimensions = new Dimensions(45, 23, 67);
-		Case thecase = new Case("F25", "kop", "ter", dimensions);
-		Resolution nativeresolution = new Resolution(65, 96);
-		Monitor monitor = new Monitor("G25", "Intel", 45, nativeresolution);
-		PC pc = new PC(thecase, monitor, motherboard);
+        bedroom.getTv().tvcontrol("on");
+        bedroom.getBed().make();
+        bedroom.getLamp().turnOn();
+        bedroom.getWall();
+        bedroom.getFurniture().furnitureposition("corner",8);
 
-		pc.getmonitor().drawPixelAt(5,9,"RED");
-		pc.getmotherboard().loadProgram("WINDOWS XP");
-		pc.getthecase().pressPowerButton();
+
+
+
 
 	}
 }
