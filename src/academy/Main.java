@@ -84,17 +84,17 @@ class BENZ extends car{
 
     @Override
     public String startengine() {
-        return ("BENZ->startengine()");
+        return getClass().getSimpleName()+"->startengine()";
     }
 
     @Override
     public String accelerate() {
-        return ("BENZ->accelerate()");
+        return getClass().getSimpleName()+"->acclerate";
     }
 
     @Override
     public String setbrakes() {
-        return ("BENZ->setbrakes()");
+        return getClass().getSimpleName()+"->setbrakes()";
     }
 }
 
