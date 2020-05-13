@@ -1,23 +1,18 @@
 package academy;
 
+
+
 public class Main {
 	public static void main(String[] args) {
 
-        Furniture furniture=new Furniture("Ikea",4,"Black",25000);
-        Measurements measurements=new Measurements(45,25,120);
-        Tv tv=new Tv("Bravia",52000,measurements);
-        Bed bed=new Bed("double cat",4,25,5,4);
-        Lamp lamp=new Lamp("glowing single",true,5);
-        Wall wall=new Wall("south");
-        Bedroom bedroom=new Bedroom(furniture,tv,lamp,bed,wall);
-
-        bedroom.getTv().tvcontrol("on");
-        bedroom.getBed().make();
-        bedroom.getLamp().turnOn();
-        bedroom.getWall();
-        bedroom.getFurniture().furnitureposition("corner",8);
-
-
+		Circle circle=new Circle(3.75);
+		System.out.println("circle.radius= " + circle.getRadius());
+		System.out.println("circle.area= " + circle.getArea());
+		Cylinder cylinder=new Cylinder(5.55, 7.25);
+		System.out.println("cylinder.radius= " + cylinder.getRadius());
+		System.out.println("cylinder.height= " + cylinder.getHeight());
+		System.out.println("cylinder.area= " + cylinder.getArea());
+		System.out.println("cylinder.volume= " + cylinder.getVolume());
 
 
 
